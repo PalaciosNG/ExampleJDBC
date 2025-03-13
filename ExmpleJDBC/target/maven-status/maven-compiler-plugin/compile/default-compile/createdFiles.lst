@@ -3,3 +3,4 @@ co\edu\sena\examplejdbc\utils\MessageUtils.class
 co\edu\sena\examplejdbc\bd\BDConnection.class
 co\edu\sena\examplejdbc\test\TestConnection.class
 co\edu\sena\examplejdbc\model\EmployeeType.class
+co\edu\sena\examplejdbc\test\TestEmployeeType.class
