@@ -4,7 +4,7 @@
  */
 package co.edu.sena.examplejdbc.test;
 
-import co.edu.sena.examplejdbc.bd.BDConnection;
+import co.edu.sena.examplejdbc.bd.DBConnection;
 
 /**
  *
@@ -12,7 +12,7 @@ import co.edu.sena.examplejdbc.bd.BDConnection;
  */
 public class TestConnection {
     public static void main(String[] args) {
-        BDConnection connection = new BDConnection();
+        DBConnection connection = new DBConnection();
         connection.connect();
         connection.disconnect();
     }
