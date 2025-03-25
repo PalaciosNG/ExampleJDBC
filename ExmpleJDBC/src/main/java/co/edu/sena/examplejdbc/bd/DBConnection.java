@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class BDConnection {
+public class DBConnection {
 
     public static Connection connection;
     public static Statement statement;

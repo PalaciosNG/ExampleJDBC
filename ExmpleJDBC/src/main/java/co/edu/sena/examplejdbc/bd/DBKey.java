@@ -4,8 +4,8 @@
  */
 package co.edu.sena.examplejdbc.bd;
 
-import static co.edu.sena.examplejdbc.bd.BDConnection.connection;
-import static co.edu.sena.examplejdbc.bd.BDConnection.statement;
+import static co.edu.sena.examplejdbc.bd.DBConnection.connection;
+import static co.edu.sena.examplejdbc.bd.DBConnection.statement;
 import co.edu.sena.examplejdbc.model.Key;
 import co.edu.sena.examplejdbc.utils.MessageUtils;
 import java.sql.PreparedStatement;
@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author Nicol
  */
-public class DBKey extends BDConnection{
+public class DBKey extends DBConnection{
     public void insert (Key key)
     {
         try {
@@ -34,7 +34,7 @@ public class DBKey extends BDConnection{
             
             
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("Error al insertar la llave" + e.getMessage());
+            MessageUtils.showErrorMessage("Error al insertar la llave" + e.getMessage());
         }
         
         finally
@@ -59,7 +59,7 @@ public class DBKey extends BDConnection{
             
             
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("Error al actualizar la llave" + e.getMessage());
+            MessageUtils.showErrorMessage("Error al actualizar la llave" + e.getMessage());
         }
         
         finally
@@ -80,7 +80,7 @@ public class DBKey extends BDConnection{
             
             
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("Error al eliminar la llave" + e.getMessage());
+            MessageUtils.showErrorMessage("Error al eliminar la llave" + e.getMessage());
         }
         
         finally
@@ -111,7 +111,7 @@ public class DBKey extends BDConnection{
            resultSet.close();
             
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("Error al comsultar las llave" + e.getMessage());
+            MessageUtils.showErrorMessage("Error al comsultar las llave" + e.getMessage());
         }
         
         finally
@@ -146,7 +146,7 @@ public class DBKey extends BDConnection{
            preparedStatement.close();
             
         } catch (SQLException e) {
-            MessageUtils.ShowErrorMessage("Error al comsultar las llave" + e.getMessage());
+            MessageUtils.showErrorMessage("Error al comsultar las llave" + e.getMessage());
         }
         
         finally
