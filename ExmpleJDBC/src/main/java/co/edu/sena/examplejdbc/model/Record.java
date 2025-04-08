@@ -9,23 +9,73 @@ package co.edu.sena.examplejdbc.model;
  * @author Nicol
  */
 public class Record {
-    private String date_record;
-    private String start_time;
-    private String end_time;
-    private Employee employee;
-    private Key key;
+    private int id;
+    private String dateRecord;
+    private String startTime;
+    private String endTime;
+    private Employee employeeId;
+    private Key keyId;
     private String status;
 
     public Record() {
     }
 
-    public Record(String date_record, String start_time, String end_time, Employee employee, Key key, String status) {
-        this.date_record = date_record;
-        this.start_time = start_time;
-        this.end_time = end_time;
-        this.employee = employee;
-        this.key = key;
+    public Record(int id, String dateRecord, String startTime, String endTime, Employee employeeId, Key keyId, String status) {
+        this.id = id;
+        this.dateRecord = dateRecord;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.employeeId = employeeId;
+        this.keyId = keyId;
         this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDateRecord() {
+        return dateRecord;
+    }
+
+    public void setDateRecord(String dateRecord) {
+        this.dateRecord = dateRecord;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public Employee getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(Employee employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public Key getKeyId() {
+        return keyId;
+    }
+
+    public void setKeyId(Key keyId) {
+        this.keyId = keyId;
     }
 
     public String getStatus() {
@@ -35,44 +85,9 @@ public class Record {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public String getDate_record() {
-        return date_record;
-    }
-
-    public void setDate_record(String date_record) {
-        this.date_record = date_record;
-    }
-
-    public String getStart_time() {
-        return start_time;
-    }
-
-    public void setStart_time(String start_time) {
-        this.start_time = start_time;
-    }
-
-    public String getEnd_time() {
-        return end_time;
-    }
-
-    public void setEnd_time(String end_time) {
-        this.end_time = end_time;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public Key getKey() {
-        return key;
-    }
-
-    public void setKey(Key key) {
-        this.key = key;
-    }
+    
+    
+    
 }
+
+    

@@ -53,7 +53,7 @@ public class DBEmployee extends DBConnection{
             try 
             {
                 connect();
-                String sql = "UPDATE `employee` SET fullname = ?, addres = ?, phone = ?, type_id = ? WHERE document = ?";
+                String sql = "UPDATE `employee` SET fullname = ?, address = ?, phone = ?, type_id = ? WHERE document = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1, employee.getFullname()); // Actualizar el nombre completo
                 preparedStatement.setString(2, employee.getAddress());  // Actualizar la dirección
@@ -141,8 +141,8 @@ public class DBEmployee extends DBConnection{
             employee = new Employee();
             employee.setDocument(resultSet.getLong("document"));
             employee.setFullname(resultSet.getString("fullname"));
-            employee.setAddress(resultSet.getString("direction"));
-            employee.setPhone(resultSet.getString("telefono"));
+            employee.setAddress(resultSet.getString("address"));
+            employee.setPhone(resultSet.getString("phone"));
 
             // FK (Foreign Key)
             EmployeeType employeeType = dbet.findById(resultSet.getInt("type_id"));
