@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author USUARIO
+ * @author nicol
  */
 public class JFrameEmployeeType extends javax.swing.JFrame {
     private IEmployeeTypeController employeeTypeController = new EmployeeTypeController();
@@ -67,6 +67,7 @@ public class JFrameEmployeeType extends javax.swing.JFrame {
         jTableEmployeeTypes = new javax.swing.JScrollPane();
         jTableEmployeeType = new javax.swing.JTable();
         jLabelTitle = new javax.swing.JLabel();
+        jLabelHome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EmployeeType");
@@ -128,6 +129,13 @@ public class JFrameEmployeeType extends javax.swing.JFrame {
         jLabelTitle.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelTitle.setText("TIPOS DE EMPLEADO");
 
+        jLabelHome.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nicol\\OneDrive\\Escritorio\\Repos\\ExampleJDBC\\ExmpleJDBC\\src\\main\\resources\\co\\edu\\sena\\examplejdbc\\view\\home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png")); // NOI18N
+        jLabelHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelHomeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -160,15 +168,19 @@ public class JFrameEmployeeType extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jButtonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
+                        .addContainerGap()
+                        .addComponent(jLabelHome)
+                        .addGap(183, 183, 183)
                         .addComponent(jLabelTitle)))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabelTitle)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelTitle)
+                    .addComponent(jLabelHome))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldDescript, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -238,6 +250,12 @@ public class JFrameEmployeeType extends javax.swing.JFrame {
             jButtonDelete.setEnabled(true);
         }
     }//GEN-LAST:event_jTableEmployeeTypeMouseClicked
+
+    private void jLabelHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHomeMouseClicked
+        JFrameHome home = new JFrameHome();
+        home.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jLabelHomeMouseClicked
     
     public void clean()
     {
@@ -290,6 +308,7 @@ public class JFrameEmployeeType extends javax.swing.JFrame {
     private javax.swing.JButton jButtonInsert;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelHome;
     private javax.swing.JLabel jLabelId;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JTable jTableEmployeeType;
